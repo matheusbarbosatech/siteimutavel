@@ -1,0 +1,156 @@
+/* CONFIGURAÇÕES GERAIS / RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --vermelho-bombeiro: #D32F2F;
+    --azul-seguranca: #1976D2;
+    --cinza-escuro: #1A1A1A;
+    --cinza-claro: #F5F5F5;
+    --branco: #FFFFFF;
+    --verde-whatsapp: #25D366;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--branco);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.text-center { text-align: center; }
+.text-danger { color: var(--vermelho-bombeiro); }
+.text-success { color: var(--verde-whatsapp); }
+
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: var(--verde-whatsapp);
+    color: var(--branco);
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    margin: 10px;
+}
+
+.btn-danger { background-color: var(--vermelho-bombeiro); color: var(--branco); }
+.btn-danger:hover { background-color: #B71C1C; }
+.btn-success { background-color: var(--verde-whatsapp); color: var(--branco); }
+.btn-success:hover { background-color: #128C7E; }
+.btn-outline { border: 2px solid var(--branco); color: var(--branco); }
+.btn-outline:hover { background-color: var(--branco); color: var(--cinza-escuro); }
+
+/* BARRA DE NAVEGAÇÃO */
+.navbar {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar .container { padding: 15px 0; }
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-bold { font-weight: 900; font-size: 1.5rem; color: var(--vermelho-bombeiro); }
+.logo-light { font-weight: 300; font-size: 1.5rem; color: var(--branco); }
+.homologacao { font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+.badge-icon { color: var(--azul-seguranca); font-size: 1.2rem; }
+
+/* SECÇÃO HERO (PRINCIPAL) */
+.hero {
+    background: linear-gradient(135deg, rgba(26,26,26,0.95) 40%, rgba(211,47,47,0.4)), linear-gradient(to bottom, #1a1a1a, #2c3e50);
+    color: var(--branco);
+    text-align: left;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content { padding: 40px 0; max-width: 800px; margin: 0 left; }
+.tagline { color: var(--vermelho-bombeiro); text-transform: uppercase; font-weight: bold; letter-spacing: 2px; font-size: 0.9rem; }
+.hero h1 { font-size: 3rem; margin: 15px 0; font-weight: 800; line-height: 1.2; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; color: #CCCCCC; }
+
+/* LAYOUT GRID DE 2 COLUNAS */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+/* SECÇÃO SOBRE */
+.sobre { background-color: var(--branco); }
+.sobre h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--cinza-escuro); }
+.destaque { font-size: 1.2rem; font-weight: 600; color: var(--vermelho-bombeiro); margin-bottom: 15px; }
+.cards-proprio { display: flex; flex-direction: column; gap: 20px; }
+.mini-card { background: var(--cinza-claro); padding: 25px; border-left: 5px solid var(--azul-seguranca); border-radius: 4px; }
+.mini-card i { font-size: 2rem; color: var(--azul-seguranca); margin-bottom: 10px; }
+.mini-card h3 { margin-bottom: 8px; }
+
+/* SECÇÃO CURSOS */
+.cursos { background-color: var(--cinza-claro); }
+.section-title { text-align: center; margin-bottom: 50px; }
+.section-title h2 { font-size: 2.2rem; color: var(--cinza-escuro); }
+.card-curso { background-color: var(--branco); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--vermelho-bombeiro); transition: transform 0.3s ease; }
+.card-curso:hover { transform: translateY(-5px); }
+.card-icon { font-size: 2.5rem; color: var(--vermelho-bombeiro); margin-bottom: 20px; }
+.card-curso h3 { font-size: 1.5rem; margin-bottom: 15px; }
+.card-curso p { color: #666; margin-bottom: 25px; }
+.btn-link { color: var(--vermelho-bombeiro); text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; }
+
+/* SECÇÃO SÍNDICOS */
+.sindicos { background-color: var(--cinza-escuro); color: var(--branco); }
+.sindicos h2 { font-size: 2.2rem; margin-bottom: 15px; }
+.sub-sindicos { color: #AAA; font-size: 1.1rem; margin-bottom: 30px; }
+.pain-points { display: inline-block; text-align: left; margin-bottom: 35px; }
+.point { font-size: 1.2rem; margin: 12px 0; font-weight: 500; }
+
+/* RODAPÉ */
+footer { background-color: #111111; color: #888; border-top: 1px solid #222; }
+footer .container { padding: 40px 0; }
+.footer-flex { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; font-size: 0.9rem; }
+
+/* RESPONSIVIDADE (Ecrãs Pequenos/Telemóveis) */
+@media (max-width: 768px) {
+    .header-flex { flex-direction: column; text-align: center; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero-content { text-align: center; }
+    .btn-large { width: 100%; margin: 10px 0; }
+    .footer-flex { flex-direction: column; text-align: center; }
+             }
